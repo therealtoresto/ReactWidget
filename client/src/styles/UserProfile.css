@@ -1,0 +1,138 @@
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    opacity: 0;
+    transform: all 0.3s ease-in-out;
+    pointer-events: none;
+}
+
+.modal.show {
+    opacity: 1;
+    pointer-events: visible;
+}
+
+.modal-content {
+    width: 500px;
+    background-color: #fff;
+    border-radius: 8px solid ;
+    transform: translateY(-200px);
+    transition: all 0.3s ease-in-out;
+}
+
+.modal.show .modal-content {
+    transform: translateY(0);
+}
+
+.modal-header, 
+.modal-footer {
+    padding: 10px;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.btn-close-modal-container {
+    display: flex;
+    justify-content: end;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.modal-body {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.field-names {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 20%;
+}
+
+.field-names p {
+    display: flex;
+    justify-content: left;
+    font-weight: 600;
+}
+
+.field-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.field-data p {
+    display: flex;
+    justify-content: left;
+}
+
+.profile-photo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo {
+    display: flex;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    overflow: hidden; 
+    border: 1px solid grey;
+}
+
+.profile-name {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.profile-position {
+    color: grey;
+    font-size: 16px;
+}
+
+.btn-send-msg {
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border-radius: 8px;
+    height: 30px;
+    border: 1px solid grey;
+}
+
+.btn-send-msg:hover {
+    background-color: lightgray;
+}
+
+.btn-close-modal {
+    font-size: 18px;
+    display: flex;
+    border: none;
+    background-color: #fff;
+}
+
+.btn-close-modal:hover {
+    background-color: lightgray;
+    border-radius: 8px;
+    border: 1px solid grey;
+}

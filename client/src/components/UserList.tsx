@@ -16,7 +16,15 @@ interface UserData {
 export default function UserList() {
   const users = useSelector((state: any) => state.users)
   const renderedUsers = users.map((user: UserData) => (
-      <UserRecord name={user.name} nickname={user.nickname} photo={user.photo} />
+      <UserRecord 
+        key={user.nickname} 
+        name={user.name} 
+        nickname={user.nickname} 
+        photo={user.photo} 
+        email={user.email}
+        position={user.position}
+        phone={user.phone}  
+      />
     )
   )
   const renderedSomeUsers = (count: number) => {
@@ -29,27 +37,11 @@ export default function UserList() {
   }
   const [showMore, setShowMore] = useState(false);
 
-  const showAll = () => {
-    // let visibled = false
-    // if (renderedUsers.length > 3 && !visibled) {
-    //   for (let i = 4; i < renderedUsers.length; i++) {
-    //     renderedUsers[i].style.display = ''
-    //   }
-    //   visibled = true
-    // } else if (renderedUsers.length > 3 && visibled) {
-    //   for (let i = 4; i < renderedUsers.length; i++) {
-    //     renderedUsers[i].style.visible = 'none'
-    //   }
-    //   visibled = false
-    // }
-    
-
-  }
   return (
     <div className='list-container'>
       { showMore ? renderedUsers : renderedSomeUsers(3) }
       <button className='btn-view-all' onClick={() => setShowMore(!showMore)}>
-        {showMore ? 'View all': 'View less'}
+        {showMore ? 'View less' : 'View all'}
       </button>
     </div>
   )

@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import '../styles/UserRecord.css'
+import UserProfile from './UserProfile'
 
 interface UserData {
     phone?: string,
@@ -10,6 +11,13 @@ interface UserData {
     photo: string
 }
 export default function UserRecord(props: UserData) {
+  const [data, setData] = useState(props)
+  const [show, setShow] = useState(false)
+  
+  const runState = () => {
+    setData(props)
+    setShow(true)
+  }
   return (
     <div className='user-container'>
         <div className='photo'>
@@ -20,7 +28,13 @@ export default function UserRecord(props: UserData) {
             <p>{props.nickname}</p>
         </div>
         <div className="view">
-            <button className='btn-view'>View</button>
+          {/* <Link to={`/profile/${props.nickname}`}> */}
+            <button onClick={() => runState()} className='btn-view'>View</button>
+            <UserProfile
+              show={show}
+              onClose={() => setShow(false)}
+              userData={data}
+            />
         </div>
     </div>
   )

@@ -6,7 +6,6 @@
   flex-direction: row;
   justify-content: start;
   margin-bottom: 20px;
-  /* border: 2px solid grey; */
 }
 
 .photo {
@@ -16,7 +15,7 @@
   border-radius: 100%;
   overflow: hidden; 
   display: flex;
-  border: 2px solid grey;
+  border: 1px solid grey;
 }
 
 .name {
@@ -34,6 +33,7 @@
   height: 30px;
   width: 60px;
   border-radius: 8px;
+  border: 1px solid lightgrey;
 }
 
 .btn-view:hover {

@@ -1,12 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
-import usersData from '../../initData.json'
+import usersData from '../initData.json'
 
 const initialState = usersData
 
 const usersSlice = createSlice({
     name: 'users',
     initialState,
-    reducers: {}
+    reducers: {
+        getUser(state, action) {
+            state = initialState
+        },
+    }
 })
 
 export default usersSlice.reducer
