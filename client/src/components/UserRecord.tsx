@@ -20,14 +20,14 @@ export default function UserRecord(props: UserData) {
   }
   return (
     <div className='user-container'>
-        <div className='photo'>
-            <img alt='avatar' className='avatar' src={'../img/' + props.photo} /> 
+        <div className='avatar-container'>
+            <img alt='avatar' className='avatar' src={'./img/' + props.photo} /> 
         </div>
-        <div className='name'>
-            <p>{props.name}</p>
-            <p>{props.nickname}</p>
+        <div className='name-container'>
+            <span className='name'>{props.name}</span>
+            <span className='nickname'>{props.nickname}</span>
         </div>
-        <div className="view">
+        <div className="view-container">
           {/* <Link to={`/profile/${props.nickname}`}> */}
             <button onClick={() => runState()} className='btn-view'>View</button>
             <UserProfile

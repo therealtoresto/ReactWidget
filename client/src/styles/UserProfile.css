@@ -40,6 +40,7 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin-bottom: 10px;
 }
 
 .btn-close-modal-container {
@@ -49,6 +50,7 @@
 
 .modal-footer {
     border: none;
+    margin-top: 10px;
 }
 
 .modal-body {
@@ -64,6 +66,7 @@
     flex-direction: column;
     justify-content: left;
     width: 20%;
+    margin-left: 10px;
 }
 
 .field-names p {
@@ -90,13 +93,12 @@
 }
 
 .profile-photo {
-    display: flex;
-    justify-content: center;
-    width: 70px;
-    height: 70px;
-    border-radius: 100%;
+    width: 75px;
+    height: 75px;
     overflow: hidden; 
-    border: 1px solid grey;
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 50%;
 }
 
 .profile-name {
@@ -111,28 +113,28 @@
 
 .btn-send-msg {
     width: 95%;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 0 10px 10px 10px;
     font-size: 14px;
     border-radius: 8px;
-    height: 30px;
-    border: 1px solid grey;
+    height: 40px;
+    background-color: #4E46DD;
+    color: #fff;
+    font-weight: 600;
 }
 
 .btn-send-msg:hover {
-    background-color: lightgray;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid gray;
 }
 
 .btn-close-modal {
     font-size: 18px;
     display: flex;
-    border: none;
+    border: 1px solid #fff;
     background-color: #fff;
 }
 
 .btn-close-modal:hover {
-    background-color: lightgray;
-    border-radius: 8px;
-    border: 1px solid grey;
+    font-weight: 700;
 }

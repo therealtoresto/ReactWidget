@@ -1,13 +1,13 @@
 Task: 
 Create a React app containing Users widget. It should have two states:
-1.	First state shows the users list. By default it shows three items. 
+1. First state shows the users list. By default it shows three items. 
 If there are more than three it shows a “View all” button. Which expands the rest of the list when clicked on it. Each item has an avatar, short user information and a “View” button. Design example:
 
- ![First state example](/state_1.png)
+ ![First state example](./client/public/img/state_1.png)
 
-2.	Second state shows full user information after clicking on “View” button. It has a “Close” button to go back to the Users list. Button “Send message” does nothing. Design example:
+2. Second state shows full user information after clicking on “View” button. It has a “Close” button to go back to the Users list. Button “Send message” does nothing. Design example:
 
-  ![First state example](/state_2.png)
+  ![First state example](./client/public/img/state_2.png)
 
 Initial input data: initData.json
 

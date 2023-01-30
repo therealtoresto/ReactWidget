@@ -5,37 +5,52 @@
   max-width: 500px;
   flex-direction: row;
   justify-content: start;
-  margin-bottom: 20px;
+  border-bottom: 1px solid lightgray;
 }
 
-.photo {
-  margin: 5px 20px 5px 5px;
+.avatar-container {
+  margin: 10px 15px 10px 10px;
+}
+
+.avatar {
+  object-fit: cover;
+  vertical-align: middle;
   width: 50px;
   height: 50px;
-  border-radius: 100%;
-  overflow: hidden; 
+  border-radius: 50%;
+}
+
+.name-container {
   display: flex;
-  border: 1px solid grey;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .name {
-  display: flex;
+  font-weight: 600;
 }
 
-.view {
-  margin-top: 15px;
+.nickname {
+  margin-top: 5px;
+  color: gray
+}
+
+.view-container {
+  margin-top: 20px;
   position: absolute;
   right: 15px;
 }
 
 .btn-view {
   font-size: 14px;
+  font-weight: 600;
   height: 30px;
   width: 60px;
   border-radius: 8px;
   border: 1px solid lightgrey;
+  background-color: #fff;
 }
 
 .btn-view:hover {
-  background-color: lightgray;
+  background-color: rgb(240, 240, 240);
 }

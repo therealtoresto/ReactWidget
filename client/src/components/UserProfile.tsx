@@ -28,7 +28,7 @@ export default function UserProfile( props: Props ) {
       <div className='modal-content' onClick={e => e.stopPropagation()}>
         <div className='modal-header'>
           <div className='btn-close-modal-container'>
-            <button className='btn-close-modal' onClick={props.onClose}>{'✕'}</button>
+            <button className='btn-close-modal' onClick={props.onClose}>✕</button>
           </div>
           <div className="profile-photo-container">
             <img alt='avatar' className='profile-photo' src={'../img/' + props.userData.photo} />
@@ -51,10 +51,10 @@ export default function UserProfile( props: Props ) {
           <div className="field-data">
             <p>{props.userData.phone}</p>
             <p>
-              <a href={'https://example.com/' + props.userData.nickname}>{'https://example.com/' + props.userData.nickname}</a>
+              <a href={'/'}>{'https://example.com/' + props.userData.nickname}</a>
             </p>
             <p>
-              <a href={props.userData.email}>{props.userData.email}</a>
+              <a href={'/'}>{props.userData.email}</a>
             </p>
           </div>
         </div>
